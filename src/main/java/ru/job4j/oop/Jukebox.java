@@ -1,6 +1,6 @@
 package ru.job4j.oop;
 
-public class JukeBox {
+public class Jukebox {
     public void music(int position) {
         if (position == 1) {
             System.out.println("Пусть бегут неуклюже");
@@ -12,7 +12,7 @@ public class JukeBox {
     }
 
     public static void main(String[] args) {
-        JukeBox box = new JukeBox();
+        Jukebox box = new Jukebox();
         box.music(1);
         box.music(2);
         box.music(3);
