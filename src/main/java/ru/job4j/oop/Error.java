@@ -25,7 +25,7 @@ public class Error {
         Error error = new Error();
         Error er = new Error(true, 1, "Троян");
         Error rootkit = new Error(false, 2, "Руткит");
-        Error worm = new Error(true, 4, "Worm");
+        Error worm = new Error(true, 3, "Worm");
         error.printOf();
         System.out.println();
         er.printOf();
