@@ -19,8 +19,8 @@ public class Calculator {
         return c / x;
     }
 
-    public int sumAllOperation(int d) {
-        return sum(d) + multiply(d) + minus(d) + divide(d);
+    public int sumAllOperation(int z) {
+        return sum(z) + multiply(z) + minus(z) + divide(z);
     }
 
     public static void main(String[] args) {
