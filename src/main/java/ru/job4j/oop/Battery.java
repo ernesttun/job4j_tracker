@@ -10,6 +10,7 @@ public class Battery {
     public String about() {
         return "My charge: " + load + "%";
     }
+
     public void exchange(Battery another) {
         another.load += this.load;
         this.load = 0;
