@@ -19,7 +19,7 @@ class TriangleTest {
 
     @Test
     public void when100and50and40ThenMinus1() {
-        Point a = new Point(10, 0);
+        Point a = new Point(11, 0);
         Point b = new Point(5, 0);
         Point c = new Point(4, 0);
         Triangle triangle = new Triangle(a, b, c);
