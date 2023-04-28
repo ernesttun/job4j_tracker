@@ -5,9 +5,9 @@ public class Point {
 
     private int y;
 
-    public Point(int first, int second) {
+    public Point(int first, int third) {
         this.x = first;
-        this.y = second;
+        this.y = third;
     }
 
     public double distance(Point that) {
