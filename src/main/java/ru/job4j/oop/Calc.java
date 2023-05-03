@@ -18,7 +18,6 @@ public class Calc {
             return new Multiple(result);
         }
 
-
     public static void main(String[] args) {
         Calc.Multiple mult = Calc.getMult(3);
         System.out.println("Квадрат числа равен " + mult.getResult());

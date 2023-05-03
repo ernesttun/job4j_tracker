@@ -6,11 +6,12 @@ public class Local {
     public void getFullName() {
         final String surname = "Tyunyan";
 
-        class FullName{
+        class FullName {
             public void printFullName() {
                 System.out.println(name + " " + surname);
             }
         }
+
         FullName fullName = new FullName();
         fullName.printFullName();
     }
