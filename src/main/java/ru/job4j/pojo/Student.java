@@ -11,7 +11,7 @@ public class Student {
 
     private int group;
 
-    private Date dateOfReceipt;
+    private Date date;
 
     public String getName() {
         return name;
@@ -45,11 +45,11 @@ public class Student {
         this.group = group;
     }
 
-    public Date getDateOfReceipt() {
-        return dateOfReceipt;
+    public Date getDate() {
+        return date;
     }
 
-    public void setDateOfReceipt(Date dateOfReceipt) {
-        this.dateOfReceipt = dateOfReceipt;
+    public void setDate(Date dateOfReceipt) {
+        this.date = dateOfReceipt;
     }
 }
