@@ -15,16 +15,16 @@ public class Shop {
     }
 
     public static int indexOfNull(Product[] products) {
-        int index = 0;
+        int cell = 0;
         for (int i = 0; i < products.length; i++) {
             Product pr = products[i];
             if (pr == null) {
-                index = i;
+                cell = i;
                 break;
             } else {
-                index = -1;
+                cell = -1;
             }
         }
-        return index;
+        return cell;
     }
 }
