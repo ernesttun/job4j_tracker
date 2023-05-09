@@ -34,8 +34,7 @@ public class Tracker {
                 size++;
             }
         }
-        item = Arrays.copyOf(item, size);
-        return item;
+        return Arrays.copyOf(item, size);
     }
 
     public Item[] findByName(String key) {
