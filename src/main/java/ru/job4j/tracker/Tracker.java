@@ -15,7 +15,7 @@ public class Tracker {
 
     public Item findById(int id) {
         int index = indexOf(id);
-        return index != 1 ? items[index] : null;
+        return index != -1 ? items[index] : null;
     }
 
     public Item[] findAll() {
@@ -50,6 +50,17 @@ public class Tracker {
         if (rsl) {
             item.setId(id);
             items[index] = item;
+        }
+        return rsl;
+    }
+
+    public boolean delete(int id) {
+        int index = indexOf(id);
+        boolean rsl = index != -1;
+        if (rsl) {
+            System.arraycopy(items, index + 1, items, index, size - index);
+            items[size - 1] = null;
+            size--;
         }
         return rsl;
     }
