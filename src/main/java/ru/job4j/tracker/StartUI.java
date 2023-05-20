@@ -52,9 +52,9 @@ public class StartUI {
                 System.out.print("Enter id: ");
                 int id = Integer.parseInt(scanner.nextLine());
                 Item item = tracker.findById(id);
-                System.out.println(item);
                 if (item != null) {
                     System.out.println("Найдена заявка");
+                    System.out.println(item);
                 } else {
                     System.out.println("Заявка с введенным id: " + id + " не найдена");
                 }
