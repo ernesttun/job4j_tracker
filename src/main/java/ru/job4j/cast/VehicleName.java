@@ -7,7 +7,7 @@ public class VehicleName {
         Vehicle bus = new Bus();
         Vehicle[] vehicle = new Vehicle[] {fly, train, bus};
         for (Vehicle list : vehicle) {
-            list.move();
+            list.moves();
         }
     }
 }
