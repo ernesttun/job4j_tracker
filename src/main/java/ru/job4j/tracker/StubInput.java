@@ -7,6 +7,7 @@ public class StubInput implements Input {
     public StubInput(String[] answer) {
         this.answer = answer;
     }
+
     @Override
     public String askStr(String question) {
         return answer[position++];
