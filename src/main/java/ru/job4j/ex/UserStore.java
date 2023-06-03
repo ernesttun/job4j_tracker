@@ -9,7 +9,7 @@ public class UserStore {
                 break;
             }
         }
-        if (!user.isValid()) {
+        if (user == null) {
             throw new UserNotFoundException("There is no such user");
         }
         return user;
