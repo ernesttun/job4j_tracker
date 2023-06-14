@@ -124,7 +124,7 @@ class PasswordValidatorTest {
 
     @Test
     void whenPasswordContainSubstringAdmin() {
-        String password = "Ln2$aDmiNrTY12";
+        String password = "Ln2$aDmiNrTY1";
         IllegalArgumentException exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> PasswordValidator.validate(password)
