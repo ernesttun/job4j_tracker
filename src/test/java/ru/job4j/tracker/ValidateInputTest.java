@@ -31,11 +31,15 @@ class ValidateInputTest {
     public void whenInputs() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"1", "1", "1"}
+                new String[] {"1", "0", "2"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
         assertThat(selected).isEqualTo(1);
+        int selects = input.askInt("Enter menu:");
+        assertThat(selects).isEqualTo(0);
+        int select = input.askInt("Enter menu:");
+        assertThat(select).isEqualTo(2);
     }
 
     @Test
