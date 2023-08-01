@@ -9,7 +9,6 @@ public class Box {
         System.out.println("Значение типа int: " + x);
     }
 
-
     public static void main(String[] args) {
         Integer g = 250;
         Integer h = 250;
