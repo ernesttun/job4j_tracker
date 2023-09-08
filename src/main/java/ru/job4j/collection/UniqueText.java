@@ -8,7 +8,7 @@ public class UniqueText {
         String[] origin = originText.split("");
         String[] text = duplicateText.split("");
         HashSet<String> check = new HashSet<>();
-        for(String itr : origin) {
+        for (String itr : origin) {
             check.add(itr);
         }
         for (String itr : text) {
