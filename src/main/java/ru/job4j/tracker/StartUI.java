@@ -39,7 +39,7 @@ public class StartUI {
         UserAction[] action = {new CreateAction(output), new ShowAllAction(output),
                 new EditAction(output), new DeleteAction(output), new FindItemsByIdAction(output),
                 new FindItemsByNameAction(output), new ExitProgramAction(output)};
-        List<UserAction> actions = new ArrayList<>(Arrays.asList(action));
+        List<UserAction> actions = Arrays.asList(action);
         new StartUI(output).init(input, tracker, actions);
     }
 }
