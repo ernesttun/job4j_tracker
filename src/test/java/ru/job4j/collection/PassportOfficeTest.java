@@ -14,8 +14,8 @@ class PassportOfficeTest {
 
     @Test
     public void whenTestFalseAddMethod() {
-        Citizen citizen = new Citizen("qq56", "Ernest");
-        Citizen cit = new Citizen("qq56", "Maks");
+        Citizen citizen = new Citizen("qq55", "Ernest");
+        Citizen cit = new Citizen("qq55", "Maks");
         PassportOffice passportOffice = new PassportOffice();
         passportOffice.add(citizen);
         assertThat(passportOffice.add(cit)).isFalse();
