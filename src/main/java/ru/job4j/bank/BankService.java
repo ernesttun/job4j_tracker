@@ -8,7 +8,6 @@ import java.util.Map;
 public class BankService {
     private Map<User, List<Account>> users = new HashMap<>();
 
-
     public void addUser(User user) {
         if (!users.containsKey(user)) {
             users.put(user, new ArrayList<Account>());
@@ -66,7 +65,7 @@ public class BankService {
             Account srcAccount = findByRequisite(srcPassport, srcRequisite);
             Account destAccount = findByRequisite(destPassport, destRequisite);
             if (srcAccount != null && destAccount != null
-            && srcAccount.getBalance() >= amount) {
+                    && srcAccount.getBalance() >= amount) {
                 srcAccount.setBalance(srcAccount.getBalance() - amount);
                 destAccount.setBalance(destAccount.getBalance() + amount);
                 rsl = true;
