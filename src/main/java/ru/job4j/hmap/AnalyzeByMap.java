@@ -81,8 +81,8 @@ public class AnalyzeByMap {
                 int score = subject.score();
 
                 if (map.containsKey(subjectName)) {
-                    int currentSum = map.get(subjectName);
-                    map.put(subjectName, currentSum + score);
+                    int sum = map.get(subjectName);
+                    map.put(subjectName, sum + score);
                 } else {
                     map.put(subjectName, score);
                 }
