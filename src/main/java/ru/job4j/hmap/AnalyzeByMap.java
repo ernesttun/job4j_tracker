@@ -36,13 +36,8 @@ public class AnalyzeByMap {
             for (Subject subject : pupil.subjects()) {
                 String subjectName = subject.name();
                 int score = subject.score();
-
-                if (map.containsKey(subjectName)) {
-                    int currentSum = map.get(subjectName);
-                    map.put(subjectName, currentSum + score);
-                } else {
-                    map.put(subjectName, score);
-                }
+                int sum = map.getOrDefault(subjectName, score);
+                map.put(subjectName, score + sum);
             }
         }
 
