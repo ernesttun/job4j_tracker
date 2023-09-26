@@ -17,7 +17,7 @@ class ItemSortTest {
                 new Item("Felix"),
                 new Item("Messi")
         );
-        Collections.sort(items, new ItemAscByName());
+        items.sort(new ItemAscByName());
         List<Item> excepted = Arrays.asList(
                 new Item("Ernest"),
                 new Item("Felix"),
@@ -35,7 +35,7 @@ class ItemSortTest {
                 new Item("Felix"),
                 new Item("Messi")
         );
-        Collections.sort(items, new ItemDescByName());
+        items.sort(new ItemDescByName());
         List<Item> excepted = Arrays.asList(
                 new Item("Ronaldo"),
                 new Item("Messi"),
