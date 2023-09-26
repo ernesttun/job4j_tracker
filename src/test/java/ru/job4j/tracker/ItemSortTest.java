@@ -36,7 +36,6 @@ class ItemSortTest {
                 new Item("Messi")
         );
         Collections.sort(items, new ItemDescByName());
-        items.sort(new ItemDescByName());
         List<Item> excepted = Arrays.asList(
                 new Item("Ronaldo"),
                 new Item("Messi"),
