@@ -62,7 +62,7 @@ class JobTest {
                 thenComparing(new JobDescByName()).thenComparing(new JobDescByPriority());
         int rsl = comparator.compare(
                 new Job("Impl task", 5),
-                new Job("Reboot server", 8)
+                new Job("Reboot server", 6)
         );
         assertThat(rsl).isLessThan(0);
     }
