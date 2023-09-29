@@ -28,11 +28,11 @@ class ScheduleTaskTest {
         scheduleTask.addTask(new Task(MANAGER, "description_2", 10));
         scheduleTask.addTask(new Task(DEPARTMENT_HEAD, "description_3", 7));
         String expected = "description_1";
-        String result = scheduleTask.getTask().description();
-        assertThat(result).isEqualTo(expected);
+        String rsl = scheduleTask.getTask().description();
+        assertThat(rsl).isEqualTo(expected);
         scheduleTask.getTask();
         expected = "description_2";
-        result = scheduleTask.getTask().description();
-        assertThat(result).isEqualTo(expected);
+        rsl = scheduleTask.getTask().description();
+        assertThat(rsl).isEqualTo(expected);
     }
 }
