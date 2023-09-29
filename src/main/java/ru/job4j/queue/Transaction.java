@@ -17,10 +17,10 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction{" +
-                "id=" + id +
-                ", purpose='" + purpose + '\'' +
-                ", amount=" + amount +
-                '}';
+        return "Transaction{"
+                + "id=" + id
+                + ", purpose='" + purpose + '\''
+                + ", amount=" + amount
+                + '}';
     }
 }
