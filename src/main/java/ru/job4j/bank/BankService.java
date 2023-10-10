@@ -5,6 +5,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Класс описывает модель банковской системы
+ * @author ERNEST TYUNYAN
+ * @version 1.0
+ */
 public class BankService {
     /**
      * Хранение всех пользователей системы с привязанными к ним счетами
