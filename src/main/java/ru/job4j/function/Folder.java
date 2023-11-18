@@ -38,9 +38,9 @@ public class Folder {
 
     @Override
     public String toString() {
-        return "Folder{" +
-                "name='" + name + '\'' +
-                ", size=" + size +
-                '}';
+        return "Folder{"
+                + "name='" + name + '\''
+                + ", size=" + size
+                + '}';
     }
 }
