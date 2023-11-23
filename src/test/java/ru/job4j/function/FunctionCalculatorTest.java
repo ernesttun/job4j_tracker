@@ -27,8 +27,8 @@ class FunctionCalculatorTest {
     @Test
     public void whenIndicativeFunctionThenIndicativeResults() {
         FunctionCalculator function = new FunctionCalculator();
-        List<Double> rsl = function.diapason(0, 5, x -> Math.pow(x, x));
-        List<Double> excepted = Arrays.asList(1D, 1D, 4D, 27D, 256D);
+        List<Double> rsl = function.diapason(0, 5, x -> Math.pow(2, x));
+        List<Double> excepted = Arrays.asList(1D, 2D, 4D, 8D, 16D);
         assertThat(rsl).containsAll(excepted);
     }
 
