@@ -34,9 +34,10 @@ public class AnalyzeByMap {
 
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
-                String subjectName = subject.name();
-                int score = subject.score();
-                map.put(subjectName, map.getOrDefault(subjectName, 0) + score);
+//                String subjectName = subject.name();
+//                int score = subject.score();
+//                map.put(subjectName, map.getOrDefault(subjectName, 0) + score);
+                map.merge(subject.name(), subject.score(), (oldValue, newValue) -> oldValue + subject.score());
             }
         }
 
@@ -71,9 +72,7 @@ public class AnalyzeByMap {
 
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
-                String subjectName = subject.name();
-                int score = subject.score();
-                map.put(subjectName, map.getOrDefault(subjectName, 0) + score);
+                map.merge(subject.name(), subject.score(), (oldValue, newValue) -> oldValue + subject.score());
             }
         }
 
