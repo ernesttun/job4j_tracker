@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class StreamUsage {
-    public static class Task{
+    public static class Task {
         private final String name;
         private final long spent;
 
