@@ -31,7 +31,7 @@ class ListToMapTest {
                 new Student(40, "Petrov"),
                 new Student(50, "Ivanov"),
                 new Student(60, "Sidorov"),
-                new Student(70, "Petrov")
+                new Student(80, "Petrov")
         );
         Map<String, Student> result = ListToMap.convert(list);
         Map<String, Student> expected = new LinkedHashMap<>();
