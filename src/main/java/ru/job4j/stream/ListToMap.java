@@ -9,7 +9,7 @@ public class ListToMap {
         return list.stream().distinct().collect(
                 Collectors.toMap(
                         Student::getName,
-                        student -> new Student(student.getScore(), student.getName()),
+                        student -> student,
                         (e, s) -> e
                 )
         );
