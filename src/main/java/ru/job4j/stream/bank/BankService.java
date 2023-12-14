@@ -23,7 +23,7 @@ public class BankService {
             return null;
         }
         return users.get(user).stream()
-                .filter(account -> account.requisite().equals(requisite))
+                .filter(acc -> acc.requisite().equals(requisite))
                 .findFirst()
                 .orElse(null);
     }
