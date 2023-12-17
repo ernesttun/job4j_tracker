@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class CollegeTest {
     @Test
     public void whenAccountIsOptionalEmpty() {
-        Map<Student, Set<Subject>> students = Map.of(
+        Map<Student, Set<Subject>> student = Map.of(
                 new Student("Student1", "000001", "201-18-15"),
                 Set.of(
                         new Subject("Math", 70),
@@ -22,7 +22,7 @@ class CollegeTest {
                         new Subject("Sociology", 65)
                 )
         );
-        College college = new College(students);
+        College college = new College(student);
         assertThat(college.findByAccount("000010")).isEqualTo(Optional.empty());
     }
 
