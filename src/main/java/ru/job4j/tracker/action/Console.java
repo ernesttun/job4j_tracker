@@ -1,8 +1,10 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.action;
+
+import ru.job4j.tracker.Input;
 
 import java.util.Scanner;
 
-public class ConsoleInput implements Input {
+public class Console implements Input {
     private Scanner scanner = new Scanner(System.in);
 
     @Override

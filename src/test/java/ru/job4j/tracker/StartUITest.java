@@ -1,6 +1,7 @@
 package ru.job4j.tracker;
 
 import org.junit.jupiter.api.Test;
+import ru.job4j.tracker.action.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +15,8 @@ class StartUITest {
         Input input = new StubInput(new String[]{"0", "Item name", "1"});
         Tracker tracker = new Tracker();
         List<UserAction> actions = new ArrayList<>();
-        actions.add(new CreateAction(output));
-        actions.add(new ExitProgramAction(output));
+        actions.add(new Create(output));
+        actions.add(new ExitProgram(output));
         new StartUI(output).init(input, tracker, actions);
         assertThat(tracker.findAll().get(0).getName()).isEqualTo("Item name");
     }
@@ -30,8 +31,8 @@ class StartUITest {
                 new String[]{"0", String.valueOf(item.getId()), replacedName, "1"}
         );
         List<UserAction> actions = new ArrayList<>();
-        actions.add(new EditAction(output));
-        actions.add(new ExitProgramAction(output));
+        actions.add(new Edit(output));
+        actions.add(new ExitProgram(output));
         new StartUI(output).init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()).getName()).isEqualTo(replacedName);
     }
@@ -45,8 +46,8 @@ class StartUITest {
                 new String[]{"0", String.valueOf(item.getId()), "1"}
         );
         List<UserAction> actions = new ArrayList<>();
-        actions.add(new DeleteAction(output));
-        actions.add(new ExitProgramAction(output));
+        actions.add(new Delete(output));
+        actions.add(new ExitProgram(output));
         new StartUI(output).init(in, tracker, actions);
         assertThat(tracker.findById(item.getId())).isNull();
     }
@@ -61,8 +62,8 @@ class StartUITest {
                 new String[]{"0", String.valueOf(one.getId()), replaceName, "1"}
         );
         List<UserAction> actions = new ArrayList<>();
-        actions.add(new EditAction(out));
-        actions.add(new ExitProgramAction(out));
+        actions.add(new Edit(out));
+        actions.add(new ExitProgram(out));
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
         assertThat(out.toString()).isEqualTo(
@@ -87,8 +88,8 @@ class StartUITest {
                 new String[]{"0", String.valueOf(one.getId()), "1"}
         );
         List<UserAction> actions = new ArrayList<>();
-        actions.add(new ShowAllAction(out));
-        actions.add(new ExitProgramAction(out));
+        actions.add(new ShowAll(out));
+        actions.add(new ExitProgram(out));
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
         assertThat(out.toString()).isEqualTo(
@@ -113,8 +114,8 @@ class StartUITest {
                 new String[]{"0", String.valueOf(one.getId()), "1"}
         );
         List<UserAction> actions = new ArrayList<>();
-        actions.add(new FindItemsByIdAction(out));
-        actions.add(new ExitProgramAction(out));
+        actions.add(new FindItemsById(out));
+        actions.add(new ExitProgram(out));
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
         assertThat(out.toString()).isEqualTo(
@@ -140,8 +141,8 @@ class StartUITest {
                 new String[]{"0", one.getName(), "1"}
         );
         List<UserAction> actions = new ArrayList<>();
-        actions.add(new FindItemsByNameAction(out));
-        actions.add(new ExitProgramAction(out));
+        actions.add(new FindItemsByName(out));
+        actions.add(new ExitProgram(out));
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
         assertThat(out.toString()).isEqualTo(
@@ -165,7 +166,7 @@ class StartUITest {
         );
         Tracker tracker = new Tracker();
         List<UserAction> actions = new ArrayList<>();
-        actions.add(new ExitProgramAction(out));
+        actions.add(new ExitProgram(out));
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
         assertThat(out.toString()).isEqualTo(
